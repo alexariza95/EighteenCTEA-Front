@@ -25,7 +25,10 @@ import { Icon } from "astro-icon/components";
   import invariant from "tiny-invariant";
 
   const themes = ["light", "dark"];
+  const iconPath = '/{theme}-mode-favicon.ico'
   const button = document.querySelector("#theme-switcher");
+  const favicon = document.querySelector<HTMLLinkElement>('link[rel="icon"]') ?? new HTMLLinkElement();
+
   invariant(button, "button should not be null");
 
   const getThemeCurrent = () => document.documentElement.dataset.theme;
@@ -50,6 +53,8 @@ import { Icon } from "astro-icon/components";
   button.addEventListener("click", () => {
     const themeNext = getThemeNext();
     document.documentElement.dataset.theme = themeNext;
+    favicon.href = iconPath.replace('{theme}', themeNext);
+
     localStorage.setItem("theme", themeNext);
     updateIcon();
   });
