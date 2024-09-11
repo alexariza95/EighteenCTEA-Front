@@ -1,0 +1,17 @@
+---
+import ContentSection from "~/components/content-section.astro";
+---
+
+<ContentSection title="Mapa" id="compatibility">
+  <Fragment slot="lead">
+    <span class="text-secondary">Aquí estamos situados 🗺️</span>
+  </Fragment>
+  <div>
+    <div id="map" style="height: 80vh; width: 80vw;"></div>
+    <script is:inline
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwXfaZtrbRyirBsZf-ENFpIPnv3RcUWYg&callback=initMap&v=weekly&libraries=marker"
+      defer>
+    </script>
+    <script src="../pages/map.js"></script>
+  </div>
+</ContentSection>
