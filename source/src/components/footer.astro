@@ -1,12 +1,11 @@
 ---
 import { Icon } from "astro-icon/components";
-import HeroImage from "~/components/hero-image.astro";
 import type { FooterLink } from "~/types";
 
 const links: Array<FooterLink> = [
   {
-    url: "https://astro.build/",
-    description: "Astro's official website",
+    url: "https://www.bubbleteacordoba.es/",
+    description: "Home",
     icon: "mdi:home",
   },
   {
@@ -18,9 +17,6 @@ const links: Array<FooterLink> = [
 ---
 
 <footer class="relative flex h-64 items-center justify-center">
-  <div class="absolute inset-0 overflow-hidden opacity-40">
-    <HeroImage />
-  </div>
   <ul class="flex row gap-4 items-center justify-center">
     {
       links.map((link) => (
