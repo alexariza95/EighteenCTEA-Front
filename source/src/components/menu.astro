@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+import menuImage from "~/assets/carta.jpg";
+import ContentSection from "~/components/content-section.astro";
+
+const widths = [450, 800, 1200];
+const sizes = "100vw";
+---
+
+<ContentSection title="Esta es nuestra carta" id="menu">
+  <Fragment slot="lead"></Fragment>
+  <Image
+    class="h-full w-full object-cover"
+    src={menuImage}
+    widths={widths}
+    sizes={sizes}
+    alt="Carta"
+  />
+</ContentSection>
