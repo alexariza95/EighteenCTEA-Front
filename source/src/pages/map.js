@@ -1,4 +1,5 @@
 function initMap() {
+  if (typeof window !== 'undefined'){
     const map = new google.maps.Map(document.getElementById('map'), {
       center: { lat: 37.88547, lng: -4.779306 },
       mapId: 'ed71ed6ac9dcac8f',
@@ -11,5 +12,6 @@ function initMap() {
       title: '18Ctea Cordoba'
     });
   }
+}
   
   window.initMap = initMap;
