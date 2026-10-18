@@ -1,5 +1,5 @@
-<div align="center">
+# source
 
-[![Built with Astro](https://astro.badg.es/v2/built-with-astro/small.svg)](https://astro.build)
+Página estática de "dominio en uso / en restauración". Vercel despliega esta carpeta (Root Directory `source`) sin paso de build.
 
-</div>
+La web Astro anterior está en el tag `astro-legacy` (ver el README de la raíz).
